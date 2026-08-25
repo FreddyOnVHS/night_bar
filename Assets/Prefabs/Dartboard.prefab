@@ -149,3 +149,4 @@ MonoBehaviour:
   interactKey: 19
   autoReset: 1
   resetDelay: 2
+  debugLogging: 1

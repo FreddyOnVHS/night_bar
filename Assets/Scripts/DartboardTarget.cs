@@ -22,6 +22,9 @@ public class DartboardTarget : MonoBehaviour
     [SerializeField] private bool autoReset = true;
     [SerializeField] private float resetDelay = 2f;
 
+    [Header("Debug")]
+    [SerializeField] private bool debugLogging = true;
+
     private bool playerInRange;
     private bool isHit;
     private Coroutine resetRoutine;
@@ -43,17 +46,28 @@ public class DartboardTarget : MonoBehaviour
             return;
 
         if (Keyboard.current[interactKey].wasPressedThisFrame)
+        {
+            if (debugLogging)
+                Debug.Log($"[DartboardTarget] {interactKey} pressed while in range, hitting board.", this);
+
             Hit();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (debugLogging)
+            Debug.Log($"[DartboardTarget] OnTriggerEnter2D from '{other.gameObject.name}' (tag: {other.tag})", this);
+
         if (other.CompareTag("Player"))
             playerInRange = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (debugLogging)
+            Debug.Log($"[DartboardTarget] OnTriggerExit2D from '{other.gameObject.name}' (tag: {other.tag})", this);
+
         if (other.CompareTag("Player"))
             playerInRange = false;
     }
@@ -95,5 +109,15 @@ public class DartboardTarget : MonoBehaviour
     {
         yield return new WaitForSeconds(resetDelay);
         ResetBoard();
+    }
+
+    private void OnDrawGizmos()
+    {
+        var col = GetComponent<Collider2D>();
+        if (col == null)
+            return;
+
+        Gizmos.color = playerInRange ? Color.green : Color.yellow;
+        Gizmos.DrawWireCube(col.bounds.center, col.bounds.size);
     }
 }
