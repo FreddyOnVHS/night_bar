@@ -56,19 +56,40 @@ public class PlayerMovement : MonoBehaviour
 
         animator.speed = 1f;
 
-        if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
+        // Diagonals first
+        if (movement.x > 0 && movement.y > 0)
         {
-            if (movement.x > 0)
-                PlayAnimation("WalkRight");
-            else
-                PlayAnimation("WalkLeft");
+            PlayAnimation("WalkUpRightIso");
         }
-        else
+        else if (movement.x < 0 && movement.y > 0)
         {
-            if (movement.y > 0)
-                PlayAnimation("WalkUp");
-            else
-                PlayAnimation("WalkDown");
+            PlayAnimation("WalkUpLeftIso");
+        }
+        else if (movement.x > 0 && movement.y < 0)
+        {
+            PlayAnimation("WalkDownRightIso");
+        }
+        else if (movement.x < 0 && movement.y < 0)
+        {
+            PlayAnimation("WalkDownLeftIso");
+        }
+
+        // Straight directions
+        else if (movement.y > 0)
+        {
+            PlayAnimation("WalkUpIso");
+        }
+        else if (movement.y < 0)
+        {
+            PlayAnimation("WalkDownIso");
+        }
+        else if (movement.x > 0)
+        {
+            PlayAnimation("WalkRightIso");
+        }
+        else if (movement.x < 0)
+        {
+            PlayAnimation("WalkLeftIso");
         }
     }
 
