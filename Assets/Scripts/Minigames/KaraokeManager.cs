@@ -111,5 +111,10 @@ namespace NightAtTheBar
 
             OnKaraokeEnd?.Invoke(result, boredomDelta);
         }
+
+        private void Log(string message)
+        {
+            OnLogLine?.Invoke(message);
+        }
     }
 }
