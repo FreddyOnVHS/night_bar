@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,10 +126,10 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 86
-        height: 163
-      alignment: 0
+        y: 0
+        width: 88
+        height: 165
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -147,11 +147,11 @@ TextureImporter:
       name: slot_machine_ne_sheet_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 1
-        width: 87
-        height: 163
-      alignment: 0
+        x: 88
+        y: 0
+        width: 88
+        height: 165
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -169,11 +169,11 @@ TextureImporter:
       name: slot_machine_ne_sheet_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 1
-        width: 87
-        height: 163
-      alignment: 0
+        x: 176
+        y: 0
+        width: 88
+        height: 165
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -191,11 +191,11 @@ TextureImporter:
       name: slot_machine_ne_sheet_3
       rect:
         serializedVersion: 2
-        x: 263
-        y: 1
-        width: 87
-        height: 163
-      alignment: 0
+        x: 264
+        y: 0
+        width: 88
+        height: 165
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c86005eade95c349b5b8ef1fe6a3935
     internalID: 0
     vertices: []
     indices: 
@@ -221,7 +221,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":88.0,"y":165.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":6,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       slot_machine_ne_sheet_0: 1276305643500491793
       slot_machine_ne_sheet_1: -1157557669327863528
