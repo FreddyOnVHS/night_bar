@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector2 movement;
 
-    private string currentAnimation = "WalkDown";
+    private string currentAnimation = "WalkDownIso";
 
     private void Awake()
     {
